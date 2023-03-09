@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My Favourite Movies</string>
+    <string name="title"></string>
+    <string name="date"></string>
+    <string name="popularity"></string>
+    <string name="average"></string>
+    <string name="titlemdblb">Título:</string>
+    <string name="datelb">Salida:</string>
+    <string name="popularitylb">Popularidad:</string>
+    <string name="introfilm">Introduce una palabra clave para encontrar peliculas:</string>
+    <string name="askquest">Quieres esta película como favorita?</string>
+    <string name="intropoints">Puntuacion de la pelicula sobre 10</string>
+    <string name="error_points">No has introducido una puntuación sobre 10!</string>
+    <string name="titleselector">Find your film</string>
+    <string name="actualtimelb">Actual time</string>
+    <string name="country"></string>
+    <string name="name"></string>
+    <string name="region"></string>
+    <string name="regionlb">Region:</string>
+    <string name="latitlb">Latitud:</string>
+    <string name="longitudlb">Longitud:</string>
+    <string name="namelb">Name:</string>
+    <string name="tzid">Tz Id:</string>
+    <string name="currentlb">Current</string>
+    <string name="lclepochlb">LocalTime Epoch:</string>
+    <string name="lastupdatedepochlb">Last Updated Epoch</string>
+
+    <string name="time"></string>
+</resources>

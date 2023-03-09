@@ -1,0 +1,633 @@
+{
+  "movies": [
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/faXT8V80JRhnArTAeYXz0Eutpv9.jpg",
+      "favorite": true,
+      "genre_ids": [
+        16,
+        28,
+        12,
+        35,
+        10751,
+        14
+      ],
+      "id": 315162,
+      "original_language": "en",
+      "original_title": "Puss in Boots: The Last Wish",
+      "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+      "popularity": 6660.227,
+      "poster_path": "https://image.tmdb.org/t/p/original/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+      "release_date": "2022-12-07",
+      "title": "Puss in Boots: The Last Wish",
+      "video": false,
+      "vote_average": 8.6,
+      "vote_count": 2814
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/otOtC45BDzFW7nuxnWHMmnYsicK.jpg",
+      "favorite": true,
+      "genre_ids": [
+        878,
+        27,
+        35
+      ],
+      "id": 536554,
+      "original_language": "en",
+      "original_title": "M3GAN",
+      "overview": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
+      "popularity": 5692.021,
+      "poster_path": "https://image.tmdb.org/t/p/original/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+      "release_date": "2022-12-28",
+      "title": "M3GAN",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 899
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg",
+      "favorite": true,
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "id": 76600,
+      "original_language": "en",
+      "original_title": "Avatar: The Way of Water",
+      "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+      "popularity": 2598.476,
+      "poster_path": "https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "release_date": "2022-12-14",
+      "title": "Avatar: The Way of Water",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 4759
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/5pMy5LF2JAleBNBtuzizfCMWM7k.jpg",
+      "favorite": true,
+      "genre_ids": [
+        10752,
+        36,
+        18
+      ],
+      "id": 653851,
+      "original_language": "en",
+      "original_title": "Devotion",
+      "overview": "The harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy's most celebrated wingmen.",
+      "popularity": 2106.727,
+      "poster_path": "https://image.tmdb.org/t/p/original/26yQPXymbWeCLKwcmyL8dRjAzth.jpg",
+      "release_date": "2022-11-23",
+      "title": "Devotion",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 166
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/sBOenwOZGRN5nZZGw4TxwtnfrEf.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        35,
+        80,
+        53
+      ],
+      "id": 899112,
+      "original_language": "en",
+      "original_title": "Violent Night",
+      "overview": "When a team of mercenaries breaks into a wealthy family compound on Christmas Eve, taking everyone inside hostage, the team isn’t prepared for a surprise combatant: Santa Claus is on the grounds, and he’s about to show why this Nick is no saint.",
+      "popularity": 1514.794,
+      "poster_path": "https://image.tmdb.org/t/p/original/1XSYOP0JjjyMz1irihvWywro82r.jpg",
+      "release_date": "2022-11-30",
+      "title": "Violent Night",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 1061
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/vLPSvAt1CnfmDCeqG3zkFh0s6S4.jpg",
+      "favorite": true,
+      "genre_ids": [
+        10752,
+        28
+      ],
+      "id": 542196,
+      "original_language": "en",
+      "original_title": "Wolf Hound",
+      "overview": "Inspired by the real-life German special operations unit KG 200 that shot down, repaired, and flew Allied aircraft as Trojan horses, \"Wolf Hound\" takes place in 1944 German-occupied France and follows the daring exploits of Jewish-American fighter pilot Captain David Holden. Ambushed behind enemy lines, Holden must rescue a captured B-17 Flying Fortress crew, evade a ruthless enemy stalking him at every turn, and foil a plot that could completely alter the outcome of World War II.",
+      "popularity": 1516.778,
+      "poster_path": "https://image.tmdb.org/t/p/original/6sMnY4fEVAfdadhANhGnNckxsmx.jpg",
+      "release_date": "2022-06-03",
+      "title": "Wolf Hound",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 22
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/qHdPNd1cUaSNYLLNgt1Pv3LVd0T.jpg",
+      "favorite": true,
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 843794,
+      "original_language": "ko",
+      "original_title": "정이",
+      "overview": "On an uninhabitable 22nd-century Earth, the outcome of a civil war hinges on cloning the brain of an elite soldier to create a robot mercenary.",
+      "popularity": 1489.545,
+      "poster_path": "https://image.tmdb.org/t/p/original/z2nfRxZCGFgAnVhb9pZO87TyTX5.jpg",
+      "release_date": "2023-01-20",
+      "title": "JUNG_E",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 159
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 505642,
+      "original_language": "en",
+      "original_title": "Black Panther: Wakanda Forever",
+      "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+      "popularity": 1372.857,
+      "poster_path": "https://image.tmdb.org/t/p/original/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+      "release_date": "2022-11-09",
+      "title": "Black Panther: Wakanda Forever",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 1743
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/53BC9F2tpZnsGno2cLhzvGprDYS.jpg",
+      "favorite": true,
+      "genre_ids": [
+        14,
+        28,
+        12,
+        53
+      ],
+      "id": 736526,
+      "original_language": "no",
+      "original_title": "Troll",
+      "overview": "Deep inside the mountain of Dovre, something gigantic awakens after being trapped for a thousand years. Destroying everything in its path, the creature is fast approaching the capital of Norway. But how do you stop something you thought only existed in Norwegian folklore?",
+      "popularity": 1355.965,
+      "poster_path": "https://image.tmdb.org/t/p/original/9z4jRr43JdtU66P0iy8h18OyLql.jpg",
+      "release_date": "2022-12-01",
+      "title": "Troll",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 1106
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/8I37NtDffNV7AZlDa7uDvvqhovU.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14,
+        878
+      ],
+      "id": 19995,
+      "original_language": "en",
+      "original_title": "Avatar",
+      "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+      "popularity": 1299.722,
+      "poster_path": "https://image.tmdb.org/t/p/original/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+      "release_date": "2009-12-15",
+      "title": "Avatar",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 28079
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+      "favorite": true,
+      "genre_ids": [
+        14,
+        28,
+        878
+      ],
+      "id": 436270,
+      "original_language": "en",
+      "original_title": "Black Adam",
+      "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+      "popularity": 1296.511,
+      "poster_path": "https://image.tmdb.org/t/p/original/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+      "release_date": "2022-10-19",
+      "title": "Black Adam",
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 3932
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/94kQGMiFbs5MUTlt7kj9dewsMDi.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 676547,
+      "original_language": "en",
+      "original_title": "Prey for the Devil",
+      "overview": "In response to a global rise in demonic possessions, the Catholic Church reopens exorcism schools to train priests in the Rite of Exorcism. On this spiritual battlefield, an unlikely warrior rises: a young nun, Sister Ann. Thrust onto the spiritual frontline with fellow student Father Dante, Sister Ann finds herself in a battle for the soul of a young girl and soon realizes the Devil has her right where he wants her.",
+      "popularity": 1214.677,
+      "poster_path": "https://image.tmdb.org/t/p/original/iCvgemXf2Kpr2LvpDmt5J9NhjKM.jpg",
+      "release_date": "2022-10-23",
+      "title": "Prey for the Devil",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 449
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/dKqa850uvbNSCaQCV4Im1XlzEtQ.jpg",
+      "genre_ids": [
+        35,
+        80,
+        9648
+      ],
+      "id": 661374,
+      "original_language": "en",
+      "original_title": "Glass Onion: A Knives Out Mystery",
+      "overview": "World-famous detective Benoit Blanc heads to Greece to peel back the layers of a mystery surrounding a tech billionaire and his eclectic crew of friends.",
+      "popularity": 1143.828,
+      "poster_path": "https://image.tmdb.org/t/p/original/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+      "release_date": "2022-11-23",
+      "title": "Glass Onion: A Knives Out Mystery",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 3047
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/nWs0auTqn2UaFGfTKtUE5tlTeBu.jpg",
+      "genre_ids": [
+        10751,
+        35,
+        14
+      ],
+      "id": 668482,
+      "original_language": "en",
+      "original_title": "Roald Dahl's Matilda the Musical",
+      "overview": "An extraordinary young girl discovers her superpower and summons the remarkable courage, against all odds, to help others change their stories, whilst also taking charge of her own destiny. Standing up for what's right, she's met with miraculous results.",
+      "popularity": 1078.715,
+      "poster_path": "https://image.tmdb.org/t/p/original/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg",
+      "release_date": "2022-11-25",
+      "title": "Roald Dahl's Matilda the Musical",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 430
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/tsjXBo4LmzV0Bb9hdrz25tzX5GD.jpg",
+      "genre_ids": [
+        10402
+      ],
+      "id": 1041513,
+      "original_language": "en",
+      "original_title": "Encanto at the Hollywood Bowl",
+      "overview": "A taped performance of the Encanto Live-to-Film Concert Experience at the Hollywood Bowl. The original cast puts on a miracle of a concert as they sing the favorite songs, accompanied by a full orchestra and 50 person ensemble, and the Hollywood Bowl transforms into Casita!",
+      "popularity": 1148.476,
+      "poster_path": "https://image.tmdb.org/t/p/original/sa3Ku5yNVjp8NloWxJoI9dQjvOi.jpg",
+      "release_date": "2022-12-28",
+      "title": "Encanto at the Hollywood Bowl",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 65
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/7GmQKKAB3q3xkpxt1VFt2DrfviW.jpg",
+      "favorite": true,
+      "genre_ids": [
+        53,
+        80
+      ],
+      "id": 934287,
+      "original_language": "da",
+      "original_title": "Klienten",
+      "overview": "Renowned psychologist Susanne (Signe Egholm Olsen) is caught in a living nightmare when her new client (Anton Hjejle) turns out to be a wanted serial killer.",
+      "popularity": 971.745,
+      "poster_path": "https://image.tmdb.org/t/p/original/oUhZzMpHAMgdRgLbsvBIqhY7fKe.jpg",
+      "release_date": "2022-06-20",
+      "title": "The Last Client",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 56
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/sKK5bbQm15jzbMRwCJmPBbv9trN.jpg",
+      "favorite": false,
+      "genre_ids": [
+        12,
+        10751,
+        14
+      ],
+      "id": 411,
+      "original_language": "en",
+      "original_title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "overview": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
+      "popularity": 960.651,
+      "poster_path": "https://image.tmdb.org/t/p/original/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+      "release_date": "2005-12-07",
+      "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 9229
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/rodjjIJ8oh9nuBp86PhojcYHTEN.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        9648,
+        53,
+        80
+      ],
+      "id": 740952,
+      "original_language": "en",
+      "original_title": "Savage Salvation",
+      "overview": "Newly engaged Shelby John and Ruby Red want a fresh start after their struggles with addiction, but when Shelby discovers his beloved Ruby dead on their porch, he embarks on a vengeful killing spree of the dealers who supplied her. Armed with nothing but adrenaline and a nail gun, Shelby begins to unleash chaos on the town’s criminal underbelly, as he hunt’s down crime lord Coyote. Sheriff Church must race against the clock to put an end to Shelby's vigilante justice before the entire town descends into a bloodbath.",
+      "popularity": 923.41,
+      "poster_path": "https://image.tmdb.org/t/p/original/fJRt3mmZEvf8gQzoNLzjPtWpc9o.jpg",
+      "release_date": "2022-12-02",
+      "title": "Savage Salvation",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 80
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/original/rodjjIJ8oh9nuBp86PhojcYHTEN.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        9648,
+        53,
+        80
+      ],
+      "id": 1041517,
+      "original_language": "en",
+      "original_title": "Savage Salvation",
+      "overview": "Newly engaged Shelby John and Ruby Red want a fresh start after their struggles with addiction, but when Shelby discovers his beloved Ruby dead on their porch, he embarks on a vengeful killing spree of the dealers who supplied her. Armed with nothing but adrenaline and a nail gun, Shelby begins to unleash chaos on the town’s criminal underbelly, as he hunt’s down crime lord Coyote. Sheriff Church must race against the clock to put an end to Shelby's vigilante justice before the entire town descends into a bloodbath.",
+      "popularity": 923.41,
+      "poster_path": "https://www.impawards.com/2005/posters/brokeback_mountain_xlg.jpg",
+      "release_date": "2022-12-02",
+      "title": "Brokeback Mountain",
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 80
+    },
+    {
+      "adult": false,
+      "backdrop_path": "",
+      "favorite": true,
+      "genre_ids": [],
+      "id": 1041515,
+      "original_language": "",
+      "original_title": "",
+      "overview": "",
+      "popularity": 0,
+      "poster_path": "https://m.media-amazon.com/images/M/MV5BMTY5MDMzODUyOF5BMl5BanBnXkFtZTcwMTQ3NTMyNA@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "release_date": "",
+      "title": "Rocky",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "http://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+      "favorite": true,
+      "genre_ids": [
+        14,
+        28
+      ],
+      "id": 557,
+      "original_language": "en",
+      "original_title": "Spider-Man",
+      "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+      "popularity": 97.703,
+      "poster_path": "",
+      "release_date": "2002-05-01",
+      "title": "Spider-Man",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 16839
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/wQ53sO5n9LCFbssV3oQ4CuajL1L.jpg",
+      "favorite": true,
+      "genre_ids": [
+        878,
+        27,
+        12,
+        28
+      ],
+      "id": 1013870,
+      "original_language": "en",
+      "original_title": "Kids vs. Aliens",
+      "overview": "All Gary wants is to make awesome home movies with his best buds. All his older sister Samantha wants is to hang with the cool kids. When their parents head out of town one Halloween weekend, an all-time rager of a teen house party turns to terror when aliens attack, forcing the siblings to band together to survive the night.",
+      "popularity": 447.176,
+      "poster_path": "",
+      "release_date": "2023-01-20",
+      "title": "Kids vs. Aliens",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 40
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500null",
+      "favorite": true,
+      "genre_ids": [
+        878
+      ],
+      "id": 817189,
+      "original_language": "en",
+      "original_title": "Alien",
+      "overview": "",
+      "popularity": 5.099,
+      "poster_path": "https://image.tmdb.org/t/p/w500/sI5eeqdoiZ62zv11WSMEev6Ynim.jpg",
+      "release_date": "2017-05-16",
+      "title": "Alien",
+      "video": false,
+      "vote_average": 5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 634649,
+      "original_language": "en",
+      "original_title": "Spider-Man: No Way Home",
+      "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+      "popularity": 430.902,
+      "poster_path": "https://image.tmdb.org/t/p/w500/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
+      "release_date": "2021-12-15",
+      "title": "Spider-Man: No Way Home",
+      "video": false,
+      "vote_average": 3,
+      "vote_count": 16883
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/bxxupqG6TBLKC60M6L8iOvbQEr6.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        35,
+        80
+      ],
+      "id": 2661,
+      "original_language": "en",
+      "original_title": "Batman",
+      "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
+      "popularity": 19.038,
+      "poster_path": "https://image.tmdb.org/t/p/w500/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg",
+      "release_date": "1966-07-30",
+      "title": "Batman",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 716
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/81WdJo2h1OHdC6ZQxIRH0RcQMlY.jpg",
+      "favorite": true,
+      "genre_ids": [
+        10402,
+        27
+      ],
+      "id": 183597,
+      "original_language": "en",
+      "original_title": "1334",
+      "overview": "1334, a ghost story that reveals the haunting disturbances that began to plague the ones left behind following the completion of PIG (1998) and the death of Rozz Williams, where reality turns into darkness, with the effect upon no return, based on true occurrences.",
+      "popularity": 0.743,
+      "poster_path": "https://image.tmdb.org/t/p/w500/6D6aJulTlptIWe7uWDMOtysEfTf.jpg",
+      "release_date": "2012-01-29",
+      "title": "1334",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/mPyiNWS0upEG1mGKOKyCQSoZpnp.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "id": 102382,
+      "original_language": "en",
+      "original_title": "The Amazing Spider-Man 2",
+      "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+      "popularity": 87.749,
+      "poster_path": "https://image.tmdb.org/t/p/w500/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
+      "release_date": "2014-04-16",
+      "title": "The Amazing Spider-Man 2",
+      "video": false,
+      "vote_average": 5,
+      "vote_count": 11806
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
+      "favorite": true,
+      "genre_ids": [
+        14,
+        28,
+        12
+      ],
+      "id": 453395,
+      "original_language": "en",
+      "original_title": "Doctor Strange in the Multiverse of Madness",
+      "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+      "popularity": 256.275,
+      "poster_path": "https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+      "release_date": "2022-05-04",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "video": false,
+      "vote_average": 3,
+      "vote_count": 7061
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/zv1xOEQzebKyku349qDZ085FZlO.jpg",
+      "favorite": true,
+      "genre_ids": [
+        28,
+        10752,
+        36,
+        10749,
+        18
+      ],
+      "id": 676,
+      "original_language": "en",
+      "original_title": "Pearl Harbor",
+      "overview": "The lifelong friendship between Rafe McCawley and Danny Walker is put to the ultimate test when the two ace fighter pilots become entangled in a love triangle with beautiful Naval nurse Evelyn Johnson. But the rivalry between the friends-turned-foes is immediately put on hold when they find themselves at the center of Japan's devastating attack on Pearl Harbor on Dec. 7, 1941.",
+      "popularity": 35.443,
+      "poster_path": "https://image.tmdb.org/t/p/w500/y8A0Cvp8WQmZ3bjbnsL53lY0dsC.jpg",
+      "release_date": "2001-05-21",
+      "title": "Pearl Harbor",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 5677
+    },
+    {
+      "adult": false,
+      "backdrop_path": "https://image.tmdb.org/t/p/w500/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+      "favorite": true,
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 10138,
+      "original_language": "en",
+      "original_title": "Iron Man 2",
+      "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+      "popularity": 167.672,
+      "poster_path": "https://image.tmdb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+      "release_date": "2010-04-28",
+      "title": "Iron Man 2",
+      "video": false,
+      "vote_average": 6,
+      "vote_count": 19020
+    }
+  ],
+  "conf": [
+    {
+      "id": "1",
+      "location": "London"
+    }
+  ]
+}
