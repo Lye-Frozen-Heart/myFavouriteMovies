@@ -1,11 +1,9 @@
-package com.mp08.myfavouritemovies.viewmodels
+package com.lyescorp
 
-import android.util.Log
 import androidx.lifecycle.*
-import com.deimos.openaiapi.OpenAI
 import com.google.gson.Gson
-import com.mp08.myfavouritemovies.models.*
-import com.mp08.myfavouritemovies.server.RetrofitConnection
+import com.lyescorp.models.*
+import com.lyescorp.server.RetrofitConnection
 import kotlinx.coroutines.launch
 
 
@@ -40,12 +38,10 @@ class MainViewModel: ViewModel() {
     val errorApiRest: LiveData<String?> get() = _errorApiRest
 
     // Creamos la instancia de OpenAI, solo para JSON-Server
-    val MY_API_KEY = "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"
-    val API_KEY = "Bearer $MY_API_KEY"
-    val openAI = OpenAI(API_KEY)
 
     init {
         loadMovies()
+        getWeatherResp()
     }
 
     fun getWeatherResp(){
@@ -58,11 +54,13 @@ class MainViewModel: ViewModel() {
             if(response.isSuccessful){
                 var gson = Gson();
                 var jsonRes = gson.toJson(response.body())
-                var c = gson.fromJson(jsonRes,Conf::class.java)
-                var resp2 = RetrofitConnection.service3.getWeatherResponse(c.location!!)
+                var c = gson.fromJson(jsonRes, Array<Conf>::class.java)
+                var resp2 = RetrofitConnection.service3.getWeatherResponse(c[0].location!!)
                 if(resp2.isSuccessful){
-                   var converted = gson.fromJson(gson.toJson(resp2.body()),WeatherClass::class.java)
+                   var converted = gson.fromJson(gson.toJson(resp2.body()), WeatherClass::class.java)
                    _weatherdata.value = converted
+
+
                 }else{
                     _errorApiRest.value = resp2.errorBody().toString()
                 }
@@ -85,7 +83,9 @@ class MainViewModel: ViewModel() {
             var response = RetrofitConnection.service.listMovies()
 
             if (response.isSuccessful) {
+
                 _movies.value = response.body()
+
                 _moviesCount.value = _movies.value!!.size
             }
             else {
@@ -110,7 +110,7 @@ class MainViewModel: ViewModel() {
                 //WARNING, Código que no se entiende
                 val gson = Gson(); //Declaro el GSON para el tratado de JSON
                 var jsonRes = gson.toJson(response.body()) //Obtengo el objeto general en forma de JSON
-                var mvdbObject = gson.fromJson(jsonRes,MovieDBDataResponse::class.java) // Lo paso a objeto general con mi data class
+                var mvdbObject = gson.fromJson(jsonRes, MovieDBDataResponse::class.java) // Lo paso a objeto general con mi data class
                 //For que recorre el array que contiene las fcking movies i las añade a las peliculas
                 for (i in 0 until mvdbObject.results.size) {
                     val item = mvdbObject.results[i]
@@ -118,7 +118,7 @@ class MainViewModel: ViewModel() {
                     var conv = gson.fromJson(itjson, MovieResponse::class.java)
                     moviedblist.add(conv)
                 }
-                _moviesdb.value = moviedblist
+                _moviesdb.value = moviedblist.sortedBy { it.title }
                 _moviesdbCount.value = _moviesdb.value!!.size
 
 
@@ -134,7 +134,6 @@ class MainViewModel: ViewModel() {
     }
 
     fun onMovieClicked(movie: Movie) {
-        movie.favorite = movie.favorite != true
 
         viewModelScope.launch {
             // actualizamos
@@ -148,9 +147,14 @@ class MainViewModel: ViewModel() {
         viewModelScope.launch {
             // actualizamos
             RetrofitConnection.service.deleteMovie(movie.id!!)
-
             // recargamos la lista que el observable de la activity recargará.
             loadMovies()
+        }
+    }
+
+    fun updateConfig(poblacion:String){
+        viewModelScope.launch {
+            RetrofitConnection.service.updateConf(1, poblacion,)
         }
     }
 

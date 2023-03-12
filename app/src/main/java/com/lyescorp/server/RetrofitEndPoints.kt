@@ -1,6 +1,6 @@
-package com.mp08.myfavouritemovies.server
+package com.lyescorp.server
 
-import com.mp08.myfavouritemovies.models.Movie
+import com.lyescorp.models.Movie
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -10,11 +10,14 @@ interface RetrofitEndPoints {
     @GET("movies")
     suspend fun listMovies(): Response<List<Movie>>
 
+    @GET("movies/{id}")
+    suspend fun getMovieBool(@Path("id") id: Long):Movie
+
     @GET("conf")
     suspend fun getLocalConf():Response<Any>
 
     @PUT("conf/{id}/{location}")
-    suspend fun updateConf(@Path("id")id:Int,@Path("location") location:String)
+    suspend fun updateConf(@Path("id") id: Int, @Query("location") location: String)
 
 
     @POST("movies")

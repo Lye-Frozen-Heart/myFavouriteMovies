@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -50,6 +51,7 @@ dependencies {
 
     implementation "androidx.activity:activity-ktx:1.6.1"
     implementation "androidx.fragment:fragment-ktx:1.5.5"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
 
     // Retrofit
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'

@@ -1,4 +1,4 @@
-package com.mp08.myfavouritemovies.models
+package com.lyescorp.models
 
 import com.google.gson.annotations.SerializedName
 

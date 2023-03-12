@@ -1,4 +1,4 @@
-package com.mp08.myfavouritemovies
+package com.lyescorp
 
 import android.app.Activity
 import android.content.Context
@@ -12,15 +12,12 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.lyescorp.models.Movie
+import com.lyescorp.models.MovieResponse
 import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.MoviedbItemBinding
-import com.mp08.myfavouritemovies.models.Movie
-import com.mp08.myfavouritemovies.models.MovieResponse
-import com.mp08.myfavouritemovies.server.RetrofitConnection.service
-import com.mp08.myfavouritemovies.viewmodels.MainViewModel
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import okhttp3.internal.notifyAll
+import com.lyescorp.server.RetrofitConnection.service
+import kotlinx.coroutines.*
 
 
 class MoviesDBAdapter(
@@ -73,7 +70,20 @@ class MoviesDBAdapter(
                 builder.setView(input)
                 builder.setPositiveButton("Introducir")
                 { _, _ ->
-                    if( input.text.toString().toDouble() <= 10.0){
+                    val scope = CoroutineScope(Dispatchers.Default)
+                    var bul: Movie? = null;
+                    // Lanzamos una corrutina
+                    val job = scope.launch {
+                       bul = service.getMovieBool(movie.id!!.toLong())
+                    }
+
+                    // Esperamos a que termine la corrutina
+                    runBlocking {
+                        job.join()
+                    }
+
+
+                    if( input.text.toString().toDouble() <= 10.0 && (movie.id!!.toLong() != bul?.id)){
                         var newMovieFav = Movie(
                             title = movie.title.toString()
                         )
@@ -105,5 +115,10 @@ class MoviesDBAdapter(
                 builder.show()
             }
         }
+
+
+
+
+
     }
 }

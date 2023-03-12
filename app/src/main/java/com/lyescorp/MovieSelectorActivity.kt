@@ -1,4 +1,4 @@
-package com.mp08.myfavouritemovies
+package com.lyescorp
 
 
 import android.os.Bundle
@@ -6,12 +6,6 @@ import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.lyescorp.myfavouritemovies.databinding.ActivityMoviesSelectorBinding
-import com.mp08.myfavouritemovies.viewmodels.MainViewModel
-import com.mp08.myfavouritemovies.viewmodels.MainViewModelFactory
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import okhttp3.internal.notifyAll
 
 @Suppress("DEPRECATION")
 class MovieSelectorActivity:AppCompatActivity() {
@@ -20,9 +14,6 @@ class MovieSelectorActivity:AppCompatActivity() {
     //cosas dentro del mismo ViewModel
     private val viewModel: MainViewModel by viewModels { MainViewModelFactory() }
     private var adapter = MoviesDBAdapter(emptyList(),this)
-    private var adapter2 = MoviesAdapter(emptyList(), this,
-        {viewModel.onMovieClicked(it) },
-        {viewModel.onMovieDelete(it)})
         override fun onCreate(savedInstanceState: Bundle?){
             super.onCreate(savedInstanceState)
             supportActionBar?.setDisplayHomeAsUpEnabled(true);

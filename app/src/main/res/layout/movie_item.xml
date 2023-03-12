@@ -39,16 +39,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="6dp"
+                android:backgroundTint="#00FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/thumb"
                 app:layout_constraintTop_toTopOf="@+id/thumb"
-                app:tint="#EF1212"
-                tools:srcCompat="@drawable/ic_favorite" />
+                tools:srcCompat="@drawable/baseline_info_24" />
 
             <TextView
                 android:id="@+id/title"

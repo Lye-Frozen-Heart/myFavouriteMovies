@@ -1,19 +1,22 @@
-package com.mp08.myfavouritemovies
+package com.lyescorp
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.lyescorp.models.Movie
 import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.MovieItemBinding
-import com.mp08.myfavouritemovies.models.Movie
 
 
 
+@Suppress("DEPRECATION")
 class MoviesAdapter(var movies: List<Movie> = emptyList(),
                     private val mContext: Context,
                     private val onItemClicked: (Movie) -> Unit,
@@ -26,17 +29,24 @@ class MoviesAdapter(var movies: List<Movie> = emptyList(),
         return ViewHolder(layoutInflater.inflate(R.layout.movie_item, parent, false), mContext)
     }
 
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = movies[position]
         holder.bind(movie)
-
-        // para capturar el click en el elemento
-        holder.itemView.setOnClickListener { onItemClicked(movie) }
-
+        val cont = holder.itemView.context
+        val intent = Intent(cont, DetailsActivity::class.java)
+        intent.putExtra("movie",movie)
         // para capturar al imagen de borrar
         val binding = MovieItemBinding.bind(holder.itemView)
         binding.delete.setOnClickListener { onDeleteClicked(movie) }
+        holder.itemView.setOnClickListener{
+            onItemClicked(movie)
+            startActivity(mContext,intent,null)
+        }
+
     }
+
+
 
     override fun getItemCount(): Int = movies.size
 
@@ -71,9 +81,9 @@ class MoviesAdapter(var movies: List<Movie> = emptyList(),
             // Llamada sin usar cache
             // Glide.with(binding.thumb).load(movie.posterPath).into(binding.thumb)
 
-            binding.favorite.setImageResource(if (movie.favorite == true) R.drawable.ic_favorite else 0)
             binding.delete.setImageResource(R.drawable.ic_delete)
 
         }
     }
+
 }

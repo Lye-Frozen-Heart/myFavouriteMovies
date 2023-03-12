@@ -20,6 +20,8 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/filter"
+        android:checkable="true"
+        android:enabled="true"
         android:icon="@drawable/baseline_arrow_upward_24"
         android:title="filterCh"
         app:showAsAction="always" />

@@ -1,4 +1,4 @@
-package com.mp08.myfavouritemovies.server
+package com.lyescorp.server
 
 import retrofit2.Response
 import retrofit2.http.*

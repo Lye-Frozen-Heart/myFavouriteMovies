@@ -1,7 +1,8 @@
-package com.mp08.myfavouritemovies
+package com.lyescorp
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.InputType
 import android.view.Menu
@@ -9,16 +10,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.result.registerForActivityResult
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.ActivityMainBinding
-import com.mp08.myfavouritemovies.server.RetrofitConnection.service
-import com.mp08.myfavouritemovies.viewmodels.MainViewModel
-import com.mp08.myfavouritemovies.viewmodels.MainViewModelFactory
 
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         //Seteamos el adaptador de la MainActivity al adaptador que queramos utilizar. Recuerda que sin esto no podras notificar los cambios
         //Ni recuperar la lista del adaptador!
         binding.rvMovies.adapter = adapter
-
 
 
         // Nos suscribimos al loading de viewModel para que cuando esté cargando la lista se utilize el gif de progreso
@@ -78,12 +75,32 @@ class MainActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG).show()
             }
         }
+
+
+
+
+
     }
 
     // creamos el menú.
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu, menu)
+        val filter = menu?.findItem(R.id.filter)
+        filter?.setOnMenuItemClickListener {
+            if(it.isChecked){
+                adapter.movies = adapter.movies.sortedByDescending { it.title }
+                adapter.notifyDataSetChanged();
+                it.icon = ContextCompat.getDrawable(this, R.drawable.baseline_arrow_downward_24);
+            }
+            else{
+                adapter.movies = adapter.movies.sortedBy { it.title }
+                adapter.notifyDataSetChanged();
+                it.icon = ContextCompat.getDrawable(this, R.drawable.baseline_arrow_upward_24);
+            }
+            it.isChecked = !it.isChecked
+            true
+        }
         return true
     }
 
@@ -104,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                 builder.setPositiveButton("Buscar")
                 { _, _ ->
                   m_Text = input.text.toString()
-                  openSomeActivityForResult(m_Text)
+                  openSelectorActivityForResult(m_Text)
 
 
                 }
@@ -113,7 +130,13 @@ class MainActivity : AppCompatActivity() {
                 builder.show()
             }
             R.id.weather ->{
-
+                if(viewModel.weatherdata.value != null){
+                    val intent = Intent(this,WeatherActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    Snackbar.make(binding.root,"The Weather data did not charge. Try again later", Snackbar.LENGTH_LONG).setBackgroundTint(
+                        Color.RED).show()
+                }
             }
             else -> super.onOptionsItemSelected(item)
         }
@@ -121,7 +144,7 @@ class MainActivity : AppCompatActivity() {
         return(super.onOptionsItemSelected(item));
     }
 
-    fun openSomeActivityForResult(keyword:String) {
+    private fun openSelectorActivityForResult(keyword:String) {
         val intent = Intent(this, MovieSelectorActivity::class.java)
         intent.putExtra("keyword",keyword)
         resultLauncher.launch(intent)
@@ -136,5 +159,6 @@ class MainActivity : AppCompatActivity() {
             viewModel.loadMovies()
         }
     }
+
 
 }

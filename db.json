@@ -3,7 +3,7 @@
     {
       "adult": false,
       "backdrop_path": "https://image.tmdb.org/t/p/original/faXT8V80JRhnArTAeYXz0Eutpv9.jpg",
-      "favorite": true,
+      "favorite": false,
       "genre_ids": [
         16,
         28,
@@ -21,13 +21,13 @@
       "release_date": "2022-12-07",
       "title": "Puss in Boots: The Last Wish",
       "video": false,
-      "vote_average": 8.6,
+      "vote_average": 8,
       "vote_count": 2814
     },
     {
       "adult": false,
       "backdrop_path": "https://image.tmdb.org/t/p/original/otOtC45BDzFW7nuxnWHMmnYsicK.jpg",
-      "favorite": true,
+      "favorite": false,
       "genre_ids": [
         878,
         27,
@@ -44,27 +44,6 @@
       "video": false,
       "vote_average": 7.6,
       "vote_count": 899
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/original/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg",
-      "favorite": true,
-      "genre_ids": [
-        878,
-        12,
-        28
-      ],
-      "id": 76600,
-      "original_language": "en",
-      "original_title": "Avatar: The Way of Water",
-      "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
-      "popularity": 2598.476,
-      "poster_path": "https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
-      "release_date": "2022-12-14",
-      "title": "Avatar: The Way of Water",
-      "video": false,
-      "vote_average": 7.7,
-      "vote_count": 4759
     },
     {
       "adult": false,
@@ -474,160 +453,12 @@
       "video": false,
       "vote_average": 5,
       "vote_count": 2
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
-      "favorite": true,
-      "genre_ids": [
-        28,
-        12,
-        878
-      ],
-      "id": 634649,
-      "original_language": "en",
-      "original_title": "Spider-Man: No Way Home",
-      "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
-      "popularity": 430.902,
-      "poster_path": "https://image.tmdb.org/t/p/w500/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg",
-      "release_date": "2021-12-15",
-      "title": "Spider-Man: No Way Home",
-      "video": false,
-      "vote_average": 3,
-      "vote_count": 16883
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/bxxupqG6TBLKC60M6L8iOvbQEr6.jpg",
-      "favorite": true,
-      "genre_ids": [
-        28,
-        35,
-        80
-      ],
-      "id": 2661,
-      "original_language": "en",
-      "original_title": "Batman",
-      "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
-      "popularity": 19.038,
-      "poster_path": "https://image.tmdb.org/t/p/w500/zzoPxWHnPa0eyfkMLgwbNvdEcVF.jpg",
-      "release_date": "1966-07-30",
-      "title": "Batman",
-      "video": false,
-      "vote_average": 6,
-      "vote_count": 716
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/81WdJo2h1OHdC6ZQxIRH0RcQMlY.jpg",
-      "favorite": true,
-      "genre_ids": [
-        10402,
-        27
-      ],
-      "id": 183597,
-      "original_language": "en",
-      "original_title": "1334",
-      "overview": "1334, a ghost story that reveals the haunting disturbances that began to plague the ones left behind following the completion of PIG (1998) and the death of Rozz Williams, where reality turns into darkness, with the effect upon no return, based on true occurrences.",
-      "popularity": 0.743,
-      "poster_path": "https://image.tmdb.org/t/p/w500/6D6aJulTlptIWe7uWDMOtysEfTf.jpg",
-      "release_date": "2012-01-29",
-      "title": "1334",
-      "video": false,
-      "vote_average": 6,
-      "vote_count": 5
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/mPyiNWS0upEG1mGKOKyCQSoZpnp.jpg",
-      "favorite": true,
-      "genre_ids": [
-        28,
-        12,
-        14
-      ],
-      "id": 102382,
-      "original_language": "en",
-      "original_title": "The Amazing Spider-Man 2",
-      "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
-      "popularity": 87.749,
-      "poster_path": "https://image.tmdb.org/t/p/w500/c3e9e18SSlvFd1cQaGmUj5tqL5P.jpg",
-      "release_date": "2014-04-16",
-      "title": "The Amazing Spider-Man 2",
-      "video": false,
-      "vote_average": 5,
-      "vote_count": 11806
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
-      "favorite": true,
-      "genre_ids": [
-        14,
-        28,
-        12
-      ],
-      "id": 453395,
-      "original_language": "en",
-      "original_title": "Doctor Strange in the Multiverse of Madness",
-      "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
-      "popularity": 256.275,
-      "poster_path": "https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
-      "release_date": "2022-05-04",
-      "title": "Doctor Strange in the Multiverse of Madness",
-      "video": false,
-      "vote_average": 3,
-      "vote_count": 7061
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/zv1xOEQzebKyku349qDZ085FZlO.jpg",
-      "favorite": true,
-      "genre_ids": [
-        28,
-        10752,
-        36,
-        10749,
-        18
-      ],
-      "id": 676,
-      "original_language": "en",
-      "original_title": "Pearl Harbor",
-      "overview": "The lifelong friendship between Rafe McCawley and Danny Walker is put to the ultimate test when the two ace fighter pilots become entangled in a love triangle with beautiful Naval nurse Evelyn Johnson. But the rivalry between the friends-turned-foes is immediately put on hold when they find themselves at the center of Japan's devastating attack on Pearl Harbor on Dec. 7, 1941.",
-      "popularity": 35.443,
-      "poster_path": "https://image.tmdb.org/t/p/w500/y8A0Cvp8WQmZ3bjbnsL53lY0dsC.jpg",
-      "release_date": "2001-05-21",
-      "title": "Pearl Harbor",
-      "video": false,
-      "vote_average": 8,
-      "vote_count": 5677
-    },
-    {
-      "adult": false,
-      "backdrop_path": "https://image.tmdb.org/t/p/w500/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
-      "favorite": true,
-      "genre_ids": [
-        12,
-        28,
-        878
-      ],
-      "id": 10138,
-      "original_language": "en",
-      "original_title": "Iron Man 2",
-      "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
-      "popularity": 167.672,
-      "poster_path": "https://image.tmdb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
-      "release_date": "2010-04-28",
-      "title": "Iron Man 2",
-      "video": false,
-      "vote_average": 6,
-      "vote_count": 19020
     }
   ],
   "conf": [
     {
       "id": "1",
-      "location": "London"
+      "location":"Barcelona"
     }
   ]
 }

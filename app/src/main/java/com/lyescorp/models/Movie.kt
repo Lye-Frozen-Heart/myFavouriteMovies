@@ -1,7 +1,10 @@
-package com.mp08.myfavouritemovies.models
+package com.lyescorp.models
 
 import com.google.gson.annotations.SerializedName
+
+
 //Data Class de Movies normal para nuestro JSON
+
 data class Movie(
     var title: String, //
     var adult: Boolean = false, //
@@ -38,11 +41,5 @@ data class Movie(
     var voteCount: Long = 0, //
 
     var favorite: Boolean = false,
-)
+) : java.io.Serializable
 
-
-class MovieAI(
-    val name: String,
-    val director: String,
-    val poster: String
-)

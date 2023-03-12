@@ -16,10 +16,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name="com.lyescorp.DetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.mp08.myfavouritemovies.MainActivity"
+            android:name="com.lyescorp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +35,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.mp08.myfavouritemovies.MovieSelectorActivity"
+            android:name="com.lyescorp.MovieSelectorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lyescorp.WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lyescorp.myfavouritemovies.com.lyescorp.viewmodels.DetailsActivity"
             android:exported="false" />
     </application>
 

@@ -1,8 +1,9 @@
-package com.mp08.myfavouritemovies.models
+package com.lyescorp.models
 import com.google.gson.annotations.SerializedName
+
 data class WeatherClass (
-@SerializedName("location" ) var location : Location? = Location(),
-@SerializedName("current"  ) var current  : Current?  = Current()
+    @SerializedName("location" ) var location : Location? = Location(),
+    @SerializedName("current"  ) var current  : Current?  = Current()
 )
 data class Location (
 

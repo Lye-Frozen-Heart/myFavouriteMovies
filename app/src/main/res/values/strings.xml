@@ -22,8 +22,22 @@
     <string name="namelb">Name:</string>
     <string name="tzid">Tz Id:</string>
     <string name="currentlb">Current</string>
-    <string name="lclepochlb">LocalTime Epoch:</string>
-    <string name="lastupdatedepochlb">Last Updated Epoch</string>
-
+    <string name="lclepochlb">Local time epoch:</string>
+    <string name="lastupdatedepochlb">Last updated epoch:</string>
     <string name="time"></string>
+    <string name="last_updated">Last updated:</string>
+    <string name="temp_c">Temp in C:</string>
+    <string name="temp_f">Temp in F:</string>
+    <string name="is_day">Is day?</string>
+    <string name="wind_mph">Wind MPH:</string>
+    <string name="wind_kph">Wind KPH:</string>
+    <string name="wind_degree">Wind degree:</string>
+    <string name="wind_dir">Wind direction:</string>
+    <string name="location">null</string>
+    <string name="points"></string>
+    <string name="overview">Overview:</string>
+    <string name="upd">Update</string>
+    <string name="voteslb">Votos:</string>
+    <string name="ch_location">Change Location</string>
+    <string name="overviewtxt"></string>
 </resources>

@@ -1,4 +1,4 @@
-package com.mp08.myfavouritemovies.server
+package com.lyescorp.server
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -28,8 +28,7 @@ object RetrofitConnection {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     private val builder3 = Retrofit.Builder()
-            //TODO("PONER LA API DE WEATHER")
-        .baseUrl("https://api.themoviedb.org/3/")
+        .baseUrl("https://api.weatherapi.com/v1/")
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
