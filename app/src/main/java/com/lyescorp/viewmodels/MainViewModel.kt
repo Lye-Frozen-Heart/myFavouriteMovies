@@ -132,6 +132,11 @@ class MainViewModel: ViewModel() {
         }
 
     }
+    fun newMovie(movie:Movie){
+        viewModelScope.launch {
+            newMovie(movie)
+        }
+    }
 
     fun onMovieClicked(movie: Movie) {
 
@@ -154,7 +159,8 @@ class MainViewModel: ViewModel() {
 
     fun updateConfig(poblacion:String){
         viewModelScope.launch {
-            RetrofitConnection.service.updateConf(1, poblacion,)
+            var newConf = Conf(1,poblacion)
+            RetrofitConnection.service.updateConf(newConf)
         }
     }
 

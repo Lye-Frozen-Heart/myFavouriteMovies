@@ -17,7 +17,6 @@ class MovieSelectorActivity:AppCompatActivity() {
     private var adapter = MoviesDBAdapter(emptyList(),this)
         override fun onCreate(savedInstanceState: Bundle?){
             super.onCreate(savedInstanceState)
-
             supportActionBar?.setDisplayHomeAsUpEnabled(true);
             supportActionBar?.setDisplayShowHomeEnabled(true);
             //Lo mismo que en MainActivity igualamos el binding al que pertoca
@@ -32,7 +31,6 @@ class MovieSelectorActivity:AppCompatActivity() {
                 adapter.movies = it
                 adapter.notifyDataSetChanged()
             }
-
             //Conteo de pelis...
             viewModel.moviesdbCount.observe(this) { count ->
                 binding.txtvwSel2.text = count.toString()

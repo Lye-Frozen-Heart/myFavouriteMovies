@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
@@ -20,7 +21,6 @@ import kotlinx.coroutines.launch
 class WeatherActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels { MainViewModelFactory() }
-
     private lateinit var binding: WeatherActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +29,12 @@ class WeatherActivity : AppCompatActivity() {
         binding = WeatherActivityBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayShowHomeEnabled(true);
+        //Titulo
         supportActionBar?.setTitle(R.string.titleweatheract)
         Snackbar.make(view,"Espere a que carguen los datos, disculpe las molestias",Snackbar.LENGTH_LONG).setBackgroundTint(
             Color.BLUE).show()
-
         binding.txtvwTime.text = viewModel.weatherdata.value?.location?.localtime
         binding.txtvwCountry.text =  viewModel.weatherdata.value?.location?.country
         binding.txtvwName.text =  viewModel.weatherdata.value?.location?.name
@@ -55,18 +57,18 @@ class WeatherActivity : AppCompatActivity() {
         circularProgressDrawable.start()
         val requestOptions = RequestOptions()
             .placeholder(circularProgressDrawable)
-        Glide.with(binding.imvwWeatherIcon)
+        Glide.with(applicationContext)
             .load( "https:" + viewModel.weatherdata.value?.current?.condition?.icon)
             .apply(requestOptions)
             .into(binding.imvwWeatherIcon)
-        binding.edtLocation.setText(viewModel.weatherdata.value?.location?.name)
+
         var handler = Handler(Looper.getMainLooper())
 
         // Llama a la función getWeatherResponse y se actualizan los datos según la API... Quizás otra manera¿?
+        //Función que recarga
         handler.postDelayed(object : Runnable {
             override fun run() {
                 viewModel.getWeatherResp()
-
                 binding.txtvwTime.text = viewModel.weatherdata.value?.location?.localtime
                 binding.txtvwCountry.text =  viewModel.weatherdata.value?.location?.country
                 binding.txtvwName.text =  viewModel.weatherdata.value?.location?.name
@@ -82,22 +84,20 @@ class WeatherActivity : AppCompatActivity() {
                 binding.txtvwTempF.text =  viewModel.weatherdata.value?.current?.tempF.toString()
                 binding.txtvwWindMPH.text =  viewModel.weatherdata.value?.current?.windMph.toString()
                 binding.txtvwWindKPH.text =  viewModel.weatherdata.value?.current?.windKph.toString()
-
+                binding.edtLocation.setText(viewModel.weatherdata.value?.location?.name)
                 val circularProgressDrawable = CircularProgressDrawable(this@WeatherActivity)
                 circularProgressDrawable.strokeWidth = 5f
                 circularProgressDrawable.centerRadius = 30f
                 circularProgressDrawable.start()
                 val requestOptions = RequestOptions()
                     .placeholder(circularProgressDrawable)
-                Glide.with(binding.imvwWeatherIcon)
+                Glide.with(applicationContext)
                     .load( "https:" + viewModel.weatherdata.value?.current?.condition?.icon)
                     .apply(requestOptions)
-                    .into(binding.imvwWeatherIcon)
-                handler.postDelayed(this, 8000)
+                    .into(binding.imvwWeatherIcon).onDestroy()
+                handler.postDelayed(this, 10000)
             }
-        }, 10000)
-
-
+        }, 15000)
         // Nos suscribimos a cuando llega un error de la api. Esto peta el programa si no hay ninguna Movie
         viewModel.errorApiRest.observe(this) {
             if (it != null) {
@@ -106,7 +106,6 @@ class WeatherActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG).show()
             }
         }
-
         binding.btnChangeLoc.setOnClickListener{
             if(binding.edtLocation.text.isNotBlank() || binding.edtLocation.text.isNotEmpty()) {
                 GlobalScope.launch {
@@ -116,16 +115,10 @@ class WeatherActivity : AppCompatActivity() {
                 Snackbar.make(view,"Introduzca un valor válido",Snackbar.LENGTH_LONG).setBackgroundTint(
                     Color.RED).show()
             }
-
         }
-
-
-
     }
-
-
-
-
-
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) finish()
+        return super.onOptionsItemSelected(item)
+    }
 }

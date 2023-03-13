@@ -20,17 +20,12 @@ import com.lyescorp.myfavouritemovies.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-
     private val viewModel: MainViewModel by viewModels { MainViewModelFactory() }
-
     private lateinit var binding: ActivityMainBinding
-
     // Creamos el adapter del recyclerView de Movies Normal, el que va al JSOn
     private val adapter = MoviesAdapter(emptyList(), this,
                                     {viewModel.onMovieClicked(it) },
                                     {viewModel.onMovieDelete(it)})
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Para trabajar con ViewBinding, igualamos el binding al Binding correspondiente de la activity, cada una tiene uno correspondiente
@@ -39,35 +34,28 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         supportActionBar?.setTitle(R.string.titlemain)
-
-
         // Configuramos el recyclerView
         //Seteamos el adaptador de la MainActivity al adaptador que queramos utilizar. Recuerda que sin esto no podras notificar los cambios
         //Ni recuperar la lista del adaptador!
         binding.rvMovies.adapter = adapter
-
-
         // Nos suscribimos al loading de viewModel para que cuando esté cargando la lista se utilize el gif de progreso
-        viewModel.loading.observe(this) { cargando ->
-            if (cargando) {
+        viewModel.loading.observe(this) { loading ->
+            if (loading) {
                 binding.progress.visibility = View.VISIBLE
             }
             else {
                 binding.progress.visibility = View.GONE
             }
         }
-
         // Nos suscribimos al moviesCount, esto cuenta cuantas Movies hay en el JSON
         viewModel.moviesCount.observe(this) { count ->
             binding.tvMoviesCount.text = count.toString()
         }
-
         // Nos suscribimos a movies, para observar si la lista ha cambiado. Muy eficiente y potente!
         viewModel.movies.observe(this) {
             adapter.movies = it
             adapter.notifyDataSetChanged()
         }
-
         // Nos suscribimos a cuando llega un error de la api. Esto peta el programa si no hay ninguna Movie
         viewModel.errorApiRest.observe(this) {
             if (it != null) {
@@ -76,14 +64,8 @@ class MainActivity : AppCompatActivity() {
                     Snackbar.LENGTH_LONG).show()
             }
         }
-
-
-
-
-
     }
-
-    // creamos el menú.
+    // Creamos el menú.
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu, menu)
@@ -118,13 +100,10 @@ class MainActivity : AppCompatActivity() {
                 var m_Text:String
                 builder.setTitle(R.string.introfilm)
                     .setView(input)
-
                 builder.setPositiveButton("Buscar")
                 { _, _ ->
                   m_Text = input.text.toString()
                   openSelectorActivityForResult(m_Text)
-
-
                 }
                 builder.setNegativeButton("Cancelar")
                 { dialog, _ -> dialog.cancel() }
@@ -158,6 +137,8 @@ class MainActivity : AppCompatActivity() {
             // There are no request codes
             adapter.notifyDataSetChanged()
             viewModel.loadMovies()
+        }else{
+            Snackbar.make(binding.root,"La movie ja existeix o ha sigut cancelada",Snackbar.LENGTH_LONG).setBackgroundTint(Color.RED).show()
         }
     }
 

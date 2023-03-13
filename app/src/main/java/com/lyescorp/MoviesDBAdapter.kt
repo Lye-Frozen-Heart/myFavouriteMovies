@@ -18,6 +18,7 @@ import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.MoviedbItemBinding
 import com.lyescorp.server.RetrofitConnection.service
 import kotlinx.coroutines.*
+import retrofit2.Response
 
 
 class MoviesDBAdapter(
@@ -70,20 +71,9 @@ class MoviesDBAdapter(
                 builder.setView(input)
                 builder.setPositiveButton("Introducir")
                 { _, _ ->
-                    val scope = CoroutineScope(Dispatchers.Default)
-                    var bul: Movie? = null;
-                    // Lanzamos una corrutina
-                    val job = scope.launch {
-                       bul = service.getMovieBool(movie.id!!.toLong())
-                    }
-
-                    // Esperamos a que termine la corrutina
-                    runBlocking {
-                        job.join()
-                    }
 
 
-                    if( input.text.toString().toDouble() <= 10.0 && (movie.id!!.toLong() != bul?.id)){
+                    if( input.text.toString().toDouble() <= 10.0 ){
                         var newMovieFav = Movie(
                             title = movie.title.toString()
                         )
@@ -92,7 +82,6 @@ class MoviesDBAdapter(
                         newMovieFav.voteAverage = input.text.toString().toDouble()
                         newMovieFav.posterPath =  "https://image.tmdb.org/t/p/w500" + movie.posterPath
                         newMovieFav.backdropPath = "https://image.tmdb.org/t/p/w500" + movie.backdropPath
-                        newMovieFav.favorite = true
                         newMovieFav.genreIDS = movie.genreIds.map { it.toLong() }
                         newMovieFav.originalLanguage = movie.originalLanguage!!
                         newMovieFav.originalTitle = movie.originalTitle!!
@@ -101,12 +90,33 @@ class MoviesDBAdapter(
                         newMovieFav.popularity = movie.popularity!!
                         newMovieFav.releaseDate = movie.releaseDate!!
                         newMovieFav.voteCount = movie.voteCount!!.toLong()
-                        GlobalScope.launch{
-                            service.newMovie(newMovieFav)
+
+                        val scope = CoroutineScope(Dispatchers.Default)
+                        var bul: Response<Movie>? = null;
+                        // Lanzamos una corrutina
+                        val job = scope.launch {
+                            bul = service.getMovieBool(movie.id!!.toLong())
                         }
+
+                        // Esperamos a que termine la corrutina
+                        runBlocking {
+                            job.join()
+                        }
+                        if(!bul!!.isSuccessful && bul!!.code() == 404){
+                            GlobalScope.launch{
+                                service.newMovie(newMovieFav)
+                            }
+                        }else{
+                            GlobalScope.launch {
+                                service.updateMovie(movie!!.id!!.toLong(),newMovieFav!!)
+                            }
+                        }
+
                         (mContext as Activity).setResult(Activity.RESULT_OK)
                         (mContext).finish()
-
+                    }else{
+                        (mContext as Activity).setResult(Activity.RESULT_CANCELED)
+                        (mContext).finish()
                     }
 
                 }

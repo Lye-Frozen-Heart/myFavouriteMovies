@@ -72,22 +72,12 @@ class DetailsActivity : AppCompatActivity() {
                 setResult(Activity.RESULT_OK)
                 Snackbar.make(binding.root,"Your movie has been updated!",Snackbar.LENGTH_LONG).setBackgroundTint(
                     Color.BLUE).show()
-
-
-
-            }
-
-
-
+                }
         }
-
-
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home){
-            finish()
-        }
-
+        if (item.itemId == android.R.id.home)finish()
         return super.onOptionsItemSelected(item)
     }
+
 }
