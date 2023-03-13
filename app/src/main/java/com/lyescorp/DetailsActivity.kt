@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.snackbar.Snackbar
 import com.lyescorp.models.Movie
+import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.ActivityDetailsBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -31,6 +32,7 @@ class DetailsActivity : AppCompatActivity() {
         setContentView(view)
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
         supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setTitle(R.string.titledetails)
 
         val movie = intent.getSerializableExtra("movie") as Movie
         binding.txtvwTitle.text = movie.title

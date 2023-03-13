@@ -40,4 +40,8 @@
     <string name="voteslb">Votos:</string>
     <string name="ch_location">Change Location</string>
     <string name="overviewtxt"></string>
+    <string name="titlemain">Favourite Movies</string>
+    <string name="titleselectoract">Select a Movie</string>
+    <string name="titledetails">Details</string>
+    <string name="titleweatheract">Weather</string>
 </resources>

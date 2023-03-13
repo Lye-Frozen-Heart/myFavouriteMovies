@@ -33,12 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         // Para trabajar con ViewBinding, igualamos el binding al Binding correspondiente de la activity, cada una tiene uno correspondiente
         //por defecto, seteando la view que toca
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportActionBar?.setTitle(R.string.titlemain)
+
 
         // Configuramos el recyclerView
         //Seteamos el adaptador de la MainActivity al adaptador que queramos utilizar. Recuerda que sin esto no podras notificar los cambios

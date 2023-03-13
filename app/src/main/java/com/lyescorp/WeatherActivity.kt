@@ -10,6 +10,7 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.snackbar.Snackbar
+import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.WeatherActivityBinding
 
 import kotlinx.coroutines.GlobalScope
@@ -28,6 +29,7 @@ class WeatherActivity : AppCompatActivity() {
         binding = WeatherActivityBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportActionBar?.setTitle(R.string.titleweatheract)
         Snackbar.make(view,"Espere a que carguen los datos, disculpe las molestias",Snackbar.LENGTH_LONG).setBackgroundTint(
             Color.BLUE).show()
 

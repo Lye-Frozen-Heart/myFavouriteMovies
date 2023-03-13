@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.lyescorp.myfavouritemovies.R
 import com.lyescorp.myfavouritemovies.databinding.ActivityMoviesSelectorBinding
 
 @Suppress("DEPRECATION")
@@ -16,12 +17,14 @@ class MovieSelectorActivity:AppCompatActivity() {
     private var adapter = MoviesDBAdapter(emptyList(),this)
         override fun onCreate(savedInstanceState: Bundle?){
             super.onCreate(savedInstanceState)
+
             supportActionBar?.setDisplayHomeAsUpEnabled(true);
             supportActionBar?.setDisplayShowHomeEnabled(true);
             //Lo mismo que en MainActivity igualamos el binding al que pertoca
             binding = ActivityMoviesSelectorBinding.inflate(layoutInflater)
             val view = binding.root
             setContentView(view)
+            supportActionBar?.setTitle(R.string.titleselectoract)
             //Seteamos el adaptador al RecyclerView para poder jugar con él
             binding.rvMoviesDB.adapter = adapter
             //Observador para la lista de Peliculas de MovieDB
