@@ -1,11 +1,9 @@
 package com.lyescorp
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
@@ -34,14 +32,11 @@ class MoviesAdapter(var movies: List<Movie> = emptyList(),
         val movie = movies[position]
         holder.bind(movie)
         val cont = holder.itemView.context
-        val intent = Intent(cont, DetailsActivity::class.java)
-        intent.putExtra("movie",movie)
         // para capturar al imagen de borrar
         val binding = MovieItemBinding.bind(holder.itemView)
         binding.delete.setOnClickListener { onDeleteClicked(movie) }
         holder.itemView.setOnClickListener{
             onItemClicked(movie)
-            startActivity(mContext,intent,null)
         }
 
     }

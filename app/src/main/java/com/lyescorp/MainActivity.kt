@@ -24,7 +24,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     // Creamos el adapter del recyclerView de Movies Normal, el que va al JSOn
     private val adapter = MoviesAdapter(emptyList(), this,
-                                    {viewModel.onMovieClicked(it) },
+                                    {
+                                        viewModel.onMovieClicked(it)
+
+                                        val intent = Intent(this, DetailsActivity::class.java)
+                                        intent.putExtra("movie",it)
+                                        resultLauncher.launch(intent)
+                                    },
                                     {viewModel.onMovieDelete(it)})
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -135,8 +141,9 @@ class MainActivity : AppCompatActivity() {
     { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             // There are no request codes
-            adapter.notifyDataSetChanged()
+
             viewModel.loadMovies()
+//            adapter.notifyDataSetChanged()
         }else{
             Snackbar.make(binding.root,"La movie ja existeix o ha sigut cancelada",Snackbar.LENGTH_LONG).setBackgroundTint(Color.RED).show()
         }
